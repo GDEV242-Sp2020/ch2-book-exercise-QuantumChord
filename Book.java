@@ -1,3 +1,4 @@
+
 /**
  * This program is used by a library look up an author, their book's title,
  * the number of pages in that book, the reference number in question,
@@ -20,12 +21,13 @@ class Book
      * Set the author and title fields when this object
      * is constructed. (2.85) (2.88)
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean courseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        this.courseText=courseText;
     }
 
     /**
@@ -57,7 +59,13 @@ public int getPages()
  */
 public void setRefNumber(String ref)
 {
-    refNumber = ref;
+    if (ref.length() >=3){
+        refNumber = ref;
+    }
+    else {
+        System.out.println("Error, reference number must be at least 3 characters.");
+    }
+        
 }
 
 /**
