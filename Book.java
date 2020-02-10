@@ -64,11 +64,22 @@ public void printTitle()
         System.out.println("The title is: " + title);
     }
 /*
- * Prints out the name of the book, the name of the author, and how many pages
- * are in the book together. (2.87)
+ * Prints out the name of the book, the name of the author,how many pages
+ * are in the book together, and what is the reference number. (2.87) (2.89)
  */
     public void printDetails()
     {
-        System.out.print("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pages);
+        
+        String refNumberString;
+        if(refNumber.length() > 0) {
+            refNumberString = refNumber;
+        }
+        else {
+            refNumberString = "ZZZ";
+        }
+        System.out.println("Reference Number: " + refNumberString);
     }
 }
