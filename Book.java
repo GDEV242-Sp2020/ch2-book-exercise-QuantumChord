@@ -13,7 +13,9 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
-
+    private int borrowed;
+    private boolean courseText;
+    
     /**
      * Set the author and title fields when this object
      * is constructed. (2.85) (2.88)
@@ -25,7 +27,22 @@ class Book
         pages = bookPages;
         refNumber = "";
     }
-/*
+
+    /**
+       * Returns the name of the author of the book.(2.83)
+     */
+    public String getAuthor()
+    {
+        return author;
+    }
+    /**
+       * Returns the name the book.(2.83)
+     */
+    public String getTitle()
+    {
+        return title;
+    }
+/**
  * Returns number of pages in book.(2.85)
  */
 public int getPages()
@@ -33,7 +50,9 @@ public int getPages()
     return pages;
 }
 
-/*
+
+
+/**
  * Sets the reference number of the book (2.88)
  */
 public void setRefNumber(String ref)
@@ -41,14 +60,36 @@ public void setRefNumber(String ref)
     refNumber = ref;
 }
 
-/*
+/**
+ * Borrows the book, value increases as the times the book is borrowed. (2.91)
+ */
+public void borrow()
+{
+    borrowed++;
+}
+
+/**
+ * Returns the number of times the book was borrowed. (2.91)
+ */
+public int getBorrowed()
+{
+    return borrowed;
+}
+
+/**
  * Returns the reference number of the book (2.88)
  */
 public String getRefNumber()
 {
     return refNumber;
 }
-/*
+
+public boolean isCourseText()
+{
+    return courseText;
+}
+
+/**
  * Prints the name of the author. (2.84)
  */    
 public void printAuthor()
@@ -56,16 +97,17 @@ public void printAuthor()
         System.out.println("The author is: " + author);
     }
 
-/*
+/**
  * Prints the title of the book. (2.84)
  */
 public void printTitle()
     {
         System.out.println("The title is: " + title);
     }
-/*
+/**
  * Prints out the name of the book, the name of the author,how many pages
- * are in the book together, and what is the reference number. (2.87) (2.89)
+ * are in the book together, what is the reference number, and
+ * how many times the book was borrowed. (2.87) (2.89) (2.91)
  */
     public void printDetails()
     {
@@ -81,5 +123,6 @@ public void printTitle()
             refNumberString = "ZZZ";
         }
         System.out.println("Reference Number: " + refNumberString);
+        System.out.println("Times Borrowed: " + borrowed);
     }
 }
