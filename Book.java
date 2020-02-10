@@ -1,8 +1,8 @@
 /**
- * A class that maintains information on a book.
- * This might form part of a larger application such
- * as a library system, for instance.
- *
+ * This program is used by a library look up an author, their book's title,
+ * the number of pages in that book, the reference number in question,
+ * how many times it was borrowed, and whether or not the book is used as
+ * a textbook on a course.
  * @author (Joseph McGuane)
  * @version (2/9/2020)
  */
