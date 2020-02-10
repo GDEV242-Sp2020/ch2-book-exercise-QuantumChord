@@ -46,4 +46,12 @@ public int getPages()
     {
         System.out.println("The title is: " + title);
     }
+/*
+ * Prints out the name of the book, the name of the author, and how many pages
+ * are in the book together. (2.87)
+ */
+    public void printDetails()
+    {
+        System.out.print("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+    }
 }
